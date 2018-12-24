@@ -3,7 +3,7 @@ import logosHeader from '../data/logosHeader';
 
 const renderLinks = ({id, src, about, href, text}) => {
     return (
-        <a key={id} href={href}>
+        <a className='logo-link' key={id} href={href}>
             <img src={src} alt={about}/>
             {text}
         </a>
@@ -15,11 +15,11 @@ class LinksList extends Component {
     render () {
         return (
             <div className='LinksList'>
-                {
-                    logosHeader.map(logo => {
-                        return renderLinks(logo);
-                    })
-                }
+                    {
+                        logosHeader.map(logo => {
+                            return renderLinks(logo);
+                        })
+                    }
             </div>
         )
     }
