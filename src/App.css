@@ -1,6 +1,6 @@
 /*ADD ROBOTO MEDIUM + HELVETICA NEUE CYR ROMAN*/
 .App {
-  text-align: center;
+    text-align: center;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -28,7 +28,7 @@ input::-webkit-search-results-decoration {
     margin: 0 auto;
 }
 .App-header .TopLine {
-  width: 100%;
+    width: 100%;
     background-color: #E4E4E4;
 }
 .TopLine .content-wrapper {
@@ -38,7 +38,7 @@ input::-webkit-search-results-decoration {
     font-size: 12px;
 }
 .TopLine .LinksList {
-  display: flex;
+    display: flex;
 }
 .TopLine .logo-link {
     display: flex;
@@ -52,8 +52,8 @@ input::-webkit-search-results-decoration {
     margin-right: .2em;
 }
 .App-header a {
-  text-decoration: none;
-  color: #000;
+    text-decoration: none;
+    color: #000;
 }
 .Content .leftside > .main-logo-link {
     margin-right: 8em;

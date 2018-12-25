@@ -5,22 +5,21 @@ import Calculate from './components/Calculate';
 import AddToCart from './components/AddToCart';
 import Footer from './components/Footer';
 import { connect } from 'react-redux';
-import { plusTotalItems, minusTotalItems } from './actions/Actions';
 
 import './App.css';
 
 class App extends Component {
   render() {
-      const { totalItems, totalPrice, discountSize, isDiscount} = this.props;
+    const { totalItems, totalPrice, discountSize, isDiscount } = this.props;
     return (
       <div className="App">
-          <h1>{totalItems}</h1>
+        <h1>{totalItems}</h1>
         <Header/>
         <ShopCart/>
         <Calculate
-            totalPrice={totalPrice}
-            discountSize={discountSize}
-            isDiscount={isDiscount}
+          totalPrice = {totalPrice}
+          discountSize = {discountSize}
+          isDiscount = {isDiscount}
         />
         <AddToCart/>
         <Footer/>
@@ -30,15 +29,10 @@ class App extends Component {
 }
 
 const mapStateToProps = store => ({
-    totalItems: store.totalItems,
-    totalPrice: store.totalPrice,
-    discountSize: store.discountSize,
-    isDiscount: store.discountSize,
+  totalItems: store.totalItems,
+  totalPrice: store.totalPrice,
+  discountSize: store.discountSize,
+  isDiscount: store.discountSize,
 });
 
-const mapDispatchToProps = dispatch => ({
-    plusTotalItems: totalItems => dispatch(plusTotalItems(totalItems)),
-    minusTotalItems: totalItems => dispatch(minusTotalItems(totalItems)),
-});
-
-export default connect(mapStateToProps, mapDispatchToProps)(App);
+export default connect(mapStateToProps)(App);
