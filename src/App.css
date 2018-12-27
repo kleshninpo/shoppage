@@ -383,3 +383,7 @@ input::-webkit-search-results-decoration {
     margin: 0;
     padding: 0;
 }
+
+.noneDisplay {
+    display: none;
+}

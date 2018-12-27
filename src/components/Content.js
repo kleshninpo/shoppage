@@ -16,7 +16,7 @@ class Content extends Component {
 
           <div className="rightside">
             <p>Иван</p>
-            <p>В корзине: {this.props.totalItems}</p>
+            <p>В корзине: {this.props.goodsInCart.length}</p>
           </div>
         </div>
       </div>
@@ -25,7 +25,7 @@ class Content extends Component {
 }
 
 const mapStateToProps = store => ({
-  totalItems: store.totalItems,
+  goodsInCart: store.goodsInCart,
 });
 
 export default connect(mapStateToProps)(Content);

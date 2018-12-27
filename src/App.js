@@ -10,14 +10,17 @@ import './App.css';
 
 class App extends Component {
   render() {
-    const { totalItems, totalPrice, discountSize, isDiscount } = this.props;
+    const { goodsInCart, discountSize, isDiscount } = this.props;
     return (
       <div className="App">
-        <h1>{totalItems}</h1>
         <Header/>
         <ShopCart/>
         <Calculate
-          totalPrice = {totalPrice}
+          totalPrice = {
+            goodsInCart.length
+              ? goodsInCart.reduce((acc, item) => acc + item.price, 0)
+              : 0
+          }
           discountSize = {discountSize}
           isDiscount = {isDiscount}
         />
@@ -29,10 +32,9 @@ class App extends Component {
 }
 
 const mapStateToProps = store => ({
-  totalItems: store.totalItems,
-  totalPrice: store.totalPrice,
+  goodsInCart: store.goodsInCart,
   discountSize: store.discountSize,
-  isDiscount: store.discountSize,
+  isDiscount: store.isDiscount,
 });
 
 export default connect(mapStateToProps)(App);

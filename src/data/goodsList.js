@@ -12,7 +12,7 @@ const goodsList = [
   {
     id: 2,
     name: 'Туфли женские, украшенные кружевными вставками',
-    price: 2450,
+    price: 250,
     img: '../img/item-shoes.png',
     color: 'черный',
     size: '38',
@@ -22,7 +22,7 @@ const goodsList = [
   {
     id: 3,
     name: 'Платье-миди',
-    price: 2450,
+    price: 1450,
     img: '../img/item-dress2.png',
     color: 'белый',
     size: '44',
@@ -32,7 +32,7 @@ const goodsList = [
   {
     id: 4,
     name: 'Платье-миди',
-    price: 2450,
+    price: 1450,
     img: '../img/item-dress2.png',
     color: 'белый',
     size: '46',

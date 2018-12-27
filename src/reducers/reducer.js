@@ -1,16 +1,33 @@
 export const initialState = {
-  totalPrice: 0,
-  totalItems: 0,
+  goodsInCart: [],
   discountSize: 1800,
   isDiscount: false,
 };
 
 export function rootReducer(state = initialState, action) {
   switch (action.type) {
-    case 'PUSH_TO_GOODS_ARR':
-      return { ...state,
-        totalItems: action.payload.totalItems,
-        totalPrice: action.payload.totalPrice,
+    case 'ADD_GOOD_IN_CART':
+      return {
+        ...state,
+        goodsInCart: [
+          ...state.goodsInCart,
+          action.payload(),
+        ],
+      };
+    case 'DELETE_GOOD_FROM_CART':
+      return {
+        ...state,
+        goodsInCart: action.payload(state.goodsInCart).goodsInCart,
+      };
+    case 'APPLY_DISCOUNT':
+      return {
+        ...state,
+        isDiscount: !state.isDiscount,
+      };
+    case 'DELETE_ALL_THIS_GOOD_FROM_CART':
+      return {
+        ...state,
+        goodsInCart: action.payload(state.goodsInCart),
       };
     default:
       return state;
