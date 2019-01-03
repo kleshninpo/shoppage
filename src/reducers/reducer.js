@@ -1,12 +1,20 @@
+import {
+  ADD_GOOD_IN_CART,
+  DELETE_GOOD_FROM_CART,
+  DELETE_ALL_THIS_GOOD_FROM_CART,
+  APPLY_DISCOUNT, SHOW_HAMBURGER,
+} from '../constants';
+
 export const initialState = {
   goodsInCart: [],
   discountSize: 1800,
   isDiscount: false,
+  showHamburger: false,
 };
 
 export function rootReducer(state = initialState, action) {
   switch (action.type) {
-    case 'ADD_GOOD_IN_CART':
+    case ADD_GOOD_IN_CART:
       return {
         ...state,
         goodsInCart: [
@@ -14,20 +22,27 @@ export function rootReducer(state = initialState, action) {
           action.payload(),
         ],
       };
-    case 'DELETE_GOOD_FROM_CART':
+    case DELETE_GOOD_FROM_CART:
       return {
         ...state,
-        goodsInCart: action.payload(state.goodsInCart).goodsInCart,
+        goodsInCart: [
+          ...action.payload(state.goodsInCart),
+        ],
       };
-    case 'APPLY_DISCOUNT':
+    case DELETE_ALL_THIS_GOOD_FROM_CART:
+      return {
+        ...state,
+        goodsInCart: action.payload(state.goodsInCart),
+      };
+    case APPLY_DISCOUNT:
       return {
         ...state,
         isDiscount: !state.isDiscount,
       };
-    case 'DELETE_ALL_THIS_GOOD_FROM_CART':
+    case SHOW_HAMBURGER:
       return {
         ...state,
-        goodsInCart: action.payload(state.goodsInCart),
+        showHamburger: !state.showHamburger,
       };
     default:
       return state;

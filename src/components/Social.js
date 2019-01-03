@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 import social from '../data/social.js';
 
-const renderSocial = ({ id, img }) => {
+const renderSocial = ({ id, img, href }) => {
   const style = {
     background: `url(${img}) center center no-repeat`,
   };
-  return <div className='social-item' style={style} key={id}> </div>;
+  return <a href={href} className='social-item' style={style} key={id}> </a>;
 };
 
 class Social extends Component {

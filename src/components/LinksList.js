@@ -4,7 +4,7 @@ import logosHeader from '../data/logosHeader';
 const renderLinks = ({ id, src, about, href, text }) => (
     <a className='logo-link' key={id} href={href}>
       <img src={src} alt={about}/>
-      {text}
+      <p>{text}</p>
     </a>
 );
 

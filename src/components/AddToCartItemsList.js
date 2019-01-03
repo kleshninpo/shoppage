@@ -5,7 +5,7 @@ const renderAddToCartItems = ({ id, img, name, price }) => (
     <div className='Add-to-cart__item' key={id}>
     <img src={img} alt={'Изображение ' + { name }}/>
     <p>{name}</p>
-    <p>{price}</p>
+    <p>{price} руб.</p>
   </div>
 );
 

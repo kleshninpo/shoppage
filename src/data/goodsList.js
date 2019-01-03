@@ -36,7 +36,7 @@ const goodsList = [
     img: '../img/item-dress2.png',
     color: 'белый',
     size: '46',
-    code: '75039',
+    code: '75039-1',
     quantity: 0,
   },
 ];

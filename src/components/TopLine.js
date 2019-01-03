@@ -5,7 +5,7 @@ class TopLine extends Component {
   render () {
     return (
       <div className='TopLine'>
-        <div className="content-wrapper">
+        <div className="content-wrapper topline__content-wrapper">
           <a href="tel:8(800)500-75-55">
             <span>8(800)500-75-55</span> Бесплатный звонок по России</a>
           <LinksList/>

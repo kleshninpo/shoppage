@@ -6,7 +6,7 @@ class Content extends Component {
   render () {
     return (
       <div className='Content' >
-        <div className="content-wrapper">
+        <div className="content-wrapper Content__content-wrapper">
           <div className='leftside'>
             <a href="/main" className='main-logo-link'>
               <img src="../img/logo.png" alt="Shop24"/>

@@ -7,7 +7,7 @@ class Footer extends Component {
   render () {
     return (
       <footer className="Footer">
-        <div className="content-wrapper">
+        <div className="content-wrapper Footer__content-wrapper">
           <Social/>
           <FooterContent/>
           <Copyright/>

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import GoodsList from '../components/GoodsList';
+import GoodsList from '../containers/GoodsList';
 
 class ShopCart extends Component {
   render() {
@@ -7,7 +7,7 @@ class ShopCart extends Component {
       <section role='main' className='Shop-cart'>
         <div className="content-wrapper">
           <h2 className='main-caption'>Ваша корзина:</h2>
-          <div className="grid-row">
+          <div className="flex-row shop-cart__flex-row">
             <h3>Товар</h3>
             <h3>Описание</h3>
             <h3>Количество</h3>

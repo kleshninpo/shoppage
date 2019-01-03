@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import footerList from '../data/footerList';
 
-const renderFooterListItem = ({ id, text, href}) => (
+const renderFooterListItem = ({ id, text, href }) => (
   <li key={id}>
     <a href={href}>{text}</a>
   </li>

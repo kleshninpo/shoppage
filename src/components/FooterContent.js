@@ -7,8 +7,10 @@ class FooterContent extends Component {
   render () {
     return (
       <div className="Footer-content">
-        <Logo/>
-        <Contacts/>
+        <div className='logo-contacts-container'>
+          <Logo/>
+          <Contacts/>
+        </div>
         <FooterList/>
       </div>
     );

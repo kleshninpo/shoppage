@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Header from './components/Header';
 import ShopCart from './components/ShopCart';
-import Calculate from './components/Calculate';
+import Calculate from './containers/Calculate';
 import AddToCart from './components/AddToCart';
 import Footer from './components/Footer';
 import { connect } from 'react-redux';

@@ -3,7 +3,8 @@ import { connect } from 'react-redux';
 import { applyDiscount } from '../actions/applyDiscount';
 
 class Calculate extends Component {
-  f = (e) => {
+
+  handleApplyDiscount = (e) => {
     const inputValue = this.refs.promoInput.value;
     if (inputValue === '123456') {
       e.currentTarget.setAttribute('disabled', true);
@@ -23,7 +24,7 @@ class Calculate extends Component {
             </div>
 
             <button className='ellipse-button enter-promo'
-                    onClick={(e) => this.f(e)}>
+                    onClick={(e) => this.handleApplyDiscount(e)}>
               Применить
             </button>
           </div>
@@ -59,8 +60,8 @@ class Calculate extends Component {
 const mapDispatchToProps = dispatch => ({
   applyDiscount: () => dispatch(applyDiscount()),
 });
-const mapStatetoProps = state => ({
+const mapStateToProps = state => ({
   isDiscount: state.isDiscount,
 });
 
-export default connect(mapStatetoProps, mapDispatchToProps)(Calculate);
+export default connect(mapStateToProps, mapDispatchToProps)(Calculate);
